@@ -3,10 +3,129 @@
   src: url(./fonts/Norse-Bold.otf);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .hero {
   background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: cover;
+  color: white;
+  padding-bottom: 15px;
 }
 
 h1 {
   font-family: "NorseBold";
+  font-size: 6rem;
+  line-height: 20px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 35%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.466);
+  margin-top: 180px;
+}
+
+.logo img {
+  height: 110px;
+}
+
+.credit {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.808);
+}
+
+.credit a {
+  color: rgba(255, 255, 255, 0.808);
+}
+
+.main {
+  background-color: rgb(250, 250, 249);
+  width: 65%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  margin-top: -190px;
+}
+
+.header {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 40px;
+}
+
+.header p {
+  margin-top: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 9px 2px 5px 1px rgba(0, 0, 0, 0.164);
+}
+
+.form-body {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  color: rgb(88, 88, 88);
+}
+
+input {
+  width: 230px;
+  height: 30px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #698d49;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  width: 180px;
+  margin-left: 40px;
+}
+
+.login {
+  margin-left: 40px;
 }
