@@ -177,6 +177,14 @@ input:not(:focus):not(:placeholder-shown):invalid {
   display: block;
 }
 
+.bad-password {
+  display: block;
+}
+
+.password-invalid {
+  border-color: red;
+}
+
 input[type="number"] {
   -moz-appearance: textfield;
 }
