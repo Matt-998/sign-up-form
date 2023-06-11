@@ -24,7 +24,7 @@ h1 {
 
 body {
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
@@ -108,7 +108,6 @@ body {
   flex-direction: column;
   gap: 25px;
   justify-content: center;
-  margin-top: -100px;
 }
 
 .header {
@@ -151,22 +150,47 @@ label {
 }
 
 input {
-  width: 230px;
-  height: 30px;
+  width: 280px;
+  height: 35px;
   padding: 5px;
   font-size: 1rem;
   border-radius: 6px;
   border: 0.5px solid rgb(228, 227, 227);
 }
 
+.error-message {
+  width: 280px;
+  color: red;
+  font-size: 14px;
+  display: none;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+#email:not(:focus):not(:placeholder-shown):invalid ~ .bad-email {
+  display: block;
+}
+
+#phone:not(:focus):not(:placeholder-shown):invalid ~ .bad-phone {
+  display: block;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 input:focus {
   border: 1.5px solid rgb(0, 0, 255);
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.24);
   outline: none;
-}
-
-input:invalid {
-  border: 1.5px solid red;
 }
 
 button {
@@ -191,12 +215,17 @@ button {
   font-weight: 600;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
 @media (max-width: 1000px) {
   body {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
-    overflow: auto;
   }
 
   .hero {
@@ -209,9 +238,9 @@ button {
   }
 
   .main {
-    min-width: 100%;
+    min-width: 100vw;
     align-items: center;
-    margin: 0 0 40px 0;
+    padding-bottom: 40px;
   }
 
   form {
@@ -226,5 +255,14 @@ button {
 
   .header {
     text-align: center;
+  }
+
+  .login,
+  button {
+    margin: 0;
+  }
+
+  .footer {
+    align-items: center;
   }
 }
