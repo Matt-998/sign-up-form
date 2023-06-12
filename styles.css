@@ -4,44 +4,58 @@
 }
 
 * {
+  /*Box model stuff*/
   margin: 0;
   padding: 0;
+  /*Miscellaneous*/
   box-sizing: border-box;
 }
 
 .hero {
+  /*Box model stuff*/
+  padding-bottom: 15px;
   background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
   background-size: cover;
+  /*Typography stuff*/
   color: white;
-  padding-bottom: 15px;
 }
 
 h1 {
+  /*Typography stuff*/
   font-family: "NorseBold";
   font-size: 6rem;
+  /*Miscellaneous*/
   line-height: 20px;
 }
 
 body {
+  /*Display stuff*/
   display: flex;
-  overflow-x: hidden;
+  /*Box model stuff*/
   min-height: 100vh;
+  /*Miscellaneous*/
+  overflow-x: hidden;
 }
 
 .hero {
+  /*Display stuff*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: center;
+  /*Box model stuff*/
   width: 35%;
+  /*Typography stuff*/
+  text-align: center;
 }
 
 .logo {
+  /*Display stuff*/
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.466);
+  /*Box model stuff*/
   margin-top: 180px;
+  background-color: rgba(0, 0, 0, 0.466);
 }
 
 .logo img {
@@ -49,26 +63,32 @@ body {
 }
 
 .arrow {
-  height: 25px;
+  /*Box model stuff*/
   width: 25px;
-  border-left: 3px solid #fafaf9;
+  height: 25px;
   border-bottom: 3px solid #fafaf9;
-  transform: rotate(-45deg);
+  border-left: 3px solid #fafaf9;
   border-radius: 5px;
+  /*Manipulations stuff*/
+  transform: rotate(-45deg);
 }
 
 .arrow2 {
-  margin-top: -20px;
-  margin-left: -3px;
+  /*Box model stuff*/
   width: 30px;
   height: 30px;
+  margin-left: -3px;
+  margin-top: -20px;
 }
 
 .arrow-container {
-  visibility: hidden;
+  /*Display stuff*/
+  display: none;
   align-self: center;
+  /*Positioning stuff*/
   position: absolute;
   bottom: 50px;
+  /*Manipulations stuff*/
   animation: bounce 1s infinite;
 }
 
@@ -89,10 +109,11 @@ body {
 }
 
 .credit {
+  /*Positioning stuff*/
+  position: relative;
+  /*Typography stuff*/
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
-  position: relative;
-
   color: rgba(255, 255, 255, 0.808);
 }
 
@@ -101,20 +122,26 @@ body {
 }
 
 .main {
-  background-color: #fafaf9;
-  width: 65%;
-  font-family: Arial, Helvetica, sans-serif;
+  /*Display stuff*/
   display: flex;
   flex-direction: column;
-  gap: 25px;
   justify-content: center;
+  /*Box model stuff*/
+  width: 65%;
+  background-color: #fafaf9;
+  /*Typography stuff*/
+  font-family: Arial, Helvetica, sans-serif;
+  /*Miscellaneous*/
+  gap: 25px;
 }
 
 .header {
+  /*Box model stuff*/
+  max-width: 700px;
+  padding: 40px;
+  /*Typography stuff*/
   font-size: 1.4rem;
   font-weight: 600;
-  padding: 40px;
-  max-width: 700px;
 }
 
 .header p {
@@ -122,17 +149,23 @@ body {
 }
 
 form {
+  /*Display stuff*/
   display: flex;
   flex-direction: column;
-  background-color: white;
+  /*Box model stuff*/
   padding: 40px;
+  background-color: white;
+  /*Miscellaneous*/
   box-shadow: 9px 2px 5px 1px rgba(0, 0, 0, 0.164);
 }
 
 .form-body {
+  /*Display stuff*/
   display: grid;
-  margin-top: 20px;
   grid-template-columns: 200px 200px;
+  /*Box model stuff*/
+  margin-top: 20px;
+  /*Miscellaneous*/
   gap: 30px 150px;
 }
 
@@ -142,27 +175,34 @@ form div {
 }
 
 label {
+  /*Typography stuff*/
   font-size: 0.7rem;
-  text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 1.8px;
+  text-transform: uppercase;
   color: rgb(88, 88, 88);
+  /*Miscellaneous*/
+  letter-spacing: 1.8px;
 }
 
 input {
+  /*Box model stuff*/
   width: 280px;
   height: 35px;
   padding: 5px;
-  font-size: 1rem;
-  border-radius: 6px;
   border: 0.5px solid rgb(228, 227, 227);
+  border-radius: 6px;
+  /*Typography stuff*/
+  font-size: 1rem;
 }
 
 .error-message {
-  width: 280px;
-  color: red;
-  font-size: 14px;
+  /*Display stuff*/
   display: none;
+  /*Box model stuff*/
+  width: 280px;
+  /*Typography stuff*/
+  font-size: 14px;
+  color: red;
 }
 
 input:not(:focus):not(:placeholder-shown):invalid {
@@ -185,10 +225,6 @@ input:not(:focus):not(:placeholder-shown):invalid {
   border-color: red;
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -196,21 +232,25 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input:focus {
+  /*Box model stuff*/
   border: 1.5px solid rgb(0, 0, 255);
-  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.24);
   outline: none;
+  /*Miscellaneous*/
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.24);
 }
 
 button {
-  background-color: #698d49;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  border: none;
-  padding: 10px;
+  /*Box model stuff*/
   width: 180px;
   margin-left: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #698d49;
+  /*Typography stuff*/
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
 }
 
 .login {
@@ -218,16 +258,42 @@ button {
 }
 
 .login a {
-  color: #698d49;
-  text-decoration: none;
+  /*Typography stuff*/
   font-weight: 600;
+  text-decoration: none;
+  color: #698d49;
 }
 
 .footer {
+  /*Display stuff*/
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /*Miscellaneous*/
   gap: 10px;
+}
+
+.footer2 {
+  margin-left: 40px;
+}
+
+.footer2 a {
+  /*Display stuff*/
+  display: inline-block;
+  /*Box model stuff*/
+  margin-left: 10px;
+  /*Typography stuff*/
+  text-decoration: none;
+  color: black;
+}
+
+.footer2 a:hover {
+  /*Typography stuff*/
+  text-decoration: underline;
+  color: #698d49;
+  /*Manipulations stuff*/
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
 }
 
 @media (max-width: 1000px) {
@@ -242,13 +308,15 @@ button {
   }
 
   .arrow-container {
-    visibility: visible;
+    display: block;
   }
 
   .main {
+    box-sizing: border-box;
     min-width: 100vw;
-    align-items: center;
+    height: 100%;
     padding-bottom: 40px;
+    align-items: center;
   }
 
   form {
@@ -272,5 +340,9 @@ button {
 
   .footer {
     align-items: center;
+  }
+
+  .footer2 {
+    margin: 0;
   }
 }
