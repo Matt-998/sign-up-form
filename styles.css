@@ -321,6 +321,7 @@ button {
 
   form {
     align-items: center;
+    padding: 40px 0 40px 0;
   }
 
   .form-body {
