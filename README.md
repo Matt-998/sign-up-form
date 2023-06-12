@@ -1,6 +1,7 @@
 # sign-up-form
 
-![Alt text](<Screenshot from 2023-06-12 15-24-30.png>)
+![Screenshot from 2023-06-12 15-24-30](https://github.com/Matt-998/sign-up-form/assets/123720140/a6560ab3-600a-4b31-82fd-a7e9b6840171)
+
 
 This is my sign up form project where i fiddled incessantly with CSS to get things looking perfect, however even still there are some slight issues but im choosing to accept it and move on with my life.
 
